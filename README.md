@@ -4,7 +4,7 @@ Super Light-Weight Utility Functions for Working with Universal Transverse Merca
 # Usage
 ## Check if EPSG Code Refers to UTM
 ```javascript
-const isUTM = require('utm-utils/isUTM');
+const isUTM = require('utm-utils/src/isUTM');
 
 const result = isUTM(32619)
 //true
@@ -12,7 +12,7 @@ const result = isUTM(32619)
 
 # Get Hemisphere for UTM
 ```javascript
-const getHemisphere = require('utm-utils/getHemisphere.js');
+const getHemisphere = require('utm-utils/src/getHemisphere');
 
 const hemisphere = getHemisphere('32617')
 // N
@@ -20,7 +20,7 @@ const hemisphere = getHemisphere('32617')
 
 # Get Zone for EPSG Code
 ```javascript
-const getZone = require('utm-utils/getZone.js');
+const getZone = require('utm-utils/src/getZone');
 
 const zone = getHemisphere('32617')
 // 17
