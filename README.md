@@ -1,2 +1,30 @@
 # utm-utils
-Utility Functions for Working with Universal Transverse Mercator
+Super Light-Weight Utility Functions for Working with Universal Transverse Mercator
+
+# Usage
+## Check if EPSG Code Refers to UTM
+```javascript
+const isUTM = require('utm-utils/isUTM');
+
+const result = isUTM(32619)
+//true
+```
+
+# Get Hemisphere for UTM
+```javascript
+const getHemisphere = require('utm-utils/getHemisphere.js');
+
+const hemisphere = getHemisphere('32617')
+// N
+```
+
+# Get Zone for EPSG Code
+```javascript
+const getZone = require('utm-utils/getZone.js');
+
+const zone = getHemisphere('32617')
+// 17
+```
+
+# Support
+Email the package author at daniel.j.dufour@gmail.com or post an issue at https://github.com/danieljdufour/utm-utils/issues
