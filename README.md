@@ -7,7 +7,7 @@ Super Light-Weight Utility Functions for Working with Universal Transverse Merca
 const isUTM = require('utm-utils/src/isUTM');
 
 const result = isUTM(32619);
-//true
+// true
 ```
 
 # Get Hemisphere from EPSG Code
@@ -24,6 +24,14 @@ const getZone = require('utm-utils/src/getZone');
 
 const zone = getZone('32617');
 // 17
+```
+
+# Get PROJ String from EPSG Code
+```javascript
+const getProjString = require('utm-utils/src/getProjString');
+
+const projString = getProjString('32617');
+// +proj=utm +zone=17 +ellps=WGS84 +datum=WGS84 +units=m +no_defs
 ```
 
 # Support

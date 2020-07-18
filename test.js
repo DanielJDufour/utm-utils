@@ -1,5 +1,6 @@
 const { expect } = require('chai');
 const isUTM = require('./src/isUTM.js');
+const getProjString = require('./src/getProjString');
 const getHemisphere = require('./src/getHemisphere.js');
 const getZone = require('./src/getZone.js');
 
@@ -24,5 +25,11 @@ describe("Check Hemisphere Identification", function () {
 describe("Check Zone Identification", function () {
     it("Identifies Zone", function() {
         expect(getZone(32618)).to.equal(18);
+    });
+});
+
+describe("Check Proj String Conversion", function () {
+    it("Get Proj String", function() {
+        expect(getProjString(32618)).to.equal('+proj=utm +zone=18 +ellps=WGS84 +datum=WGS84 +units=m +no_defs');
     });
 });
