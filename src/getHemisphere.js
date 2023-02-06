@@ -1,8 +1,11 @@
-module.exports = function getHemisphere(projection) {
+function getHemisphere(projection) {
   const projstr = projection.toString();
   if (projstr.startsWith("326")) {
     return "N";
   } else if (projstr.startsWith("327")) {
     return "S";
   }
-};
+}
+
+module.exports = getHemisphere;
+module.exports.default = getHemisphere;

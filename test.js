@@ -1,8 +1,5 @@
 const test = require("flug");
-const isUTM = require("./src/isUTM.js");
-const getProjString = require("./src/getProjString");
-const getHemisphere = require("./src/getHemisphere.js");
-const getZone = require("./src/getZone.js");
+const { isUTM, getProjString, getHemisphere, getZone } = require("./src");
 
 test("isUTM", ({ eq }) => {
   eq(isUTM(32618), true);
