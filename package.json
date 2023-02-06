@@ -3,8 +3,16 @@
   "version": "0.1.0",
   "description": "Super Light-Weight Utility Functions for Working with Universal Transverse Mercator",
   "main": "src/",
+  "files": [
+    "src/getHemisphere.js",
+    "src/getProjString.js",
+    "src/getZone.js",
+    "src/isUTM.js",
+    "src/index.js"
+  ],
   "scripts": {
-    "test": "node ./node_modules/.bin/mocha --reporter spec"
+    "format": "npx prettier --arrow-parens=avoid --print-width=120 --trailing-comma=none --write *.js */*.js",
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
@@ -26,7 +34,6 @@
   },
   "homepage": "https://github.com/danieljdufour/utm-utils#readme",
   "devDependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^7.1.1"
+    "flug": "^2.4.0"
   }
 }
