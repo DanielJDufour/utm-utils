@@ -5,6 +5,9 @@ test("isUTM", ({ eq }) => {
   eq(isUTM(32618), true);
   eq(isUTM("32618"), true);
   eq(isUTM("EPSG:32618"), true);
+  eq(isUTM("+proj=utm +zone=17 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"), true);
+  eq(isUTM("+proj=utm +zone=18 +south +ellps=WGS84 +datum=WGS84 +units=m +no_defs"), true);
+  eq(isUTM(3857), false);
 });
 
 test("getHemisphere", ({ eq }) => {
@@ -18,4 +21,5 @@ test("getZone", ({ eq }) => {
 
 test("getProjString", ({ eq }) => {
   eq(getProjString(32618), "+proj=utm +zone=18 +ellps=WGS84 +datum=WGS84 +units=m +no_defs");
+  eq(getProjString(32718), "+proj=utm +zone=18 +south +ellps=WGS84 +datum=WGS84 +units=m +no_defs");
 });

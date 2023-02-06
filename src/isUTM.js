@@ -1,6 +1,19 @@
 function isUTM(projection) {
-  const projstr = projection.toString().replace("EPSG:", "");
-  return projstr.startsWith("326") || projstr.startsWith("327");
+  const projstr = projection.toString();
+
+  const replaced = projstr.replace("EPSG:", "");
+
+  if (replaced.startsWith("326") || replaced.startsWith("327")) {
+    return true;
+  }
+
+  const sorted = projstr.split(" ").sort().join(" ");
+
+  if (sorted.match(/^\+datum=WGS84 \+ellps=WGS84 \+no_defs \+proj=utm( \+south)? \+units=m \+zone=\d{1,2}$/)) {
+    return true;
+  }
+
+  return false;
 }
 
 module.exports = isUTM;

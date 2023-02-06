@@ -9,6 +9,7 @@ const isUTM = require('utm-utils/src/isUTM');
 isUTM(32619); // true
 isUTM("32619"); // true
 isUTM("EPSG:32619"); // true
+isUTM("+proj=utm +zone=17 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"); // true
 
 isUTM("3857"); // false
 ```
