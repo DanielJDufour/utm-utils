@@ -1,5 +1,5 @@
 # utm-utils
-Super Light-Weight Utility Functions for Working with Universal Transverse Mercator
+Super Light-Weight Utility Functions for Working with [Universal Transverse Mercator](https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system)
 
 # Usage
 ## Check if EPSG Code Refers to UTM
