@@ -4,11 +4,12 @@
   "description": "Super Light-Weight Utility Functions for Working with Universal Transverse Mercator",
   "main": "src/",
   "files": [
+    "src/getCodeFromProjString.js",
     "src/getHemisphere.js",
     "src/getProjString.js",
     "src/getZone.js",
-    "src/isUTM.js",
-    "src/index.js"
+    "src/index.js",
+    "src/isUTM.js"
   ],
   "scripts": {
     "format": "npx prettier --arrow-parens=avoid --print-width=120 --trailing-comma=none --write *.js */*.js",

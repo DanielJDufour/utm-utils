@@ -16,5 +16,13 @@ function isUTM(projection) {
   return false;
 }
 
-module.exports = isUTM;
-module.exports.default = isUTM;
+if (typeof define === "function" && define.amd) {
+  return function () {
+    return isUTM;
+  };
+}
+
+if (typeof module === "object") {
+  module.exports = isUTM;
+  module.exports.default = isUTM;
+}
