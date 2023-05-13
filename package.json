@@ -4,6 +4,7 @@
   "description": "Super Light-Weight Utility Functions for Working with Universal Transverse Mercator",
   "main": "src/",
   "files": [
+    "src/getCodeFromEsriWKT.js",
     "src/getCodeFromProjString.js",
     "src/getHemisphere.js",
     "src/getProjString.js",

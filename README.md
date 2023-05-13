@@ -47,5 +47,13 @@ getCodeFromProjString("+proj=utm +zone=16 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +u
 26916
 ```
 
+## Get EPSG Code from ESRI Well-Known Text
+```js
+const getCodeFromEsriWKT = require('utm-utils/src/getCodeFromEsriWKT.js');
+
+getCodeFromEsriWKT(`PROJCS["WGS_1984_UTM_Zone_17N",GEOGCS["GCS_WGS_1984",...,UNIT["Meter",1.0]]`);
+32617
+```
+
 # Support
 Email the package author at daniel.j.dufour@gmail.com or post an issue at https://github.com/danieljdufour/utm-utils/issues
