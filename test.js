@@ -1,8 +1,11 @@
 const test = require("flug");
 const { isUTM, getCodeFromEsriWKT, getCodeFromProjString, getProjString, getHemisphere, getZone } = require("./src");
 
-test('getCodeFromEsriWKT', ({ eq }) => {
-  eq(getCodeFromEsriWKT`PROJCS["WGS_1984_UTM_Zone_17N",
+test("getCodeFromEsriWKT", ({ eq }) => {
+  eq(getCodeFromEsriWKT(null), undefined);
+  eq(getCodeFromEsriWKT(""), undefined);
+  eq(
+    getCodeFromEsriWKT(`PROJCS["WGS_1984_UTM_Zone_17N",
   GEOGCS["GCS_WGS_1984",
       DATUM["D_WGS_1984",
           SPHEROID["WGS_1984",6378137.0,298.257223563]],
@@ -15,7 +18,9 @@ test('getCodeFromEsriWKT', ({ eq }) => {
   PARAMETER["Scale_Factor",0.9996],
   PARAMETER["Latitude_Of_Origin",0.0],
   UNIT["Meter",1.0]]
-`, 32617);
+`),
+    32617
+  );
 });
 
 test("getCodeFromProjString", ({ eq }) => {
