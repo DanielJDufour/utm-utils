@@ -1,6 +1,5 @@
 function getCodeFromProjString(proj) {
-  if (proj.startsWith("+proj=utm") && proj.includes("+zone=")) {
-    // replace any accidental double spaces
+  if (proj.includes("+proj=utm") && proj.includes("+zone=")) {
     const parts = proj.split(" ");
     const zone = parts.find(part => part.startsWith("+zone=")).split("=")[1];
     const south = proj.includes("+south");

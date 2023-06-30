@@ -31,6 +31,9 @@ test("getCodeFromProjString", ({ eq }) => {
   eq(getCodeFromProjString("+proj=utm +zone=17 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"), 32617);
   eq(getCodeFromProjString("+proj=utm +zone=18 +south +ellps=WGS84 +datum=WGS84 +units=m +no_defs"), 32718);
   eq(getCodeFromProjString("+proj=utm +zone=18 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"), 32618);
+  eq(getCodeFromProjString("+proj=utm +zone=17 +datum=WGS84 +units=m +no_defs"), 32617);
+  eq(getCodeFromProjString("+proj=utm +zone=17 +datum=WGS84 +units=m"), 32617);
+  eq(getCodeFromProjString("+datum=WGS84 +proj=utm +units=m +zone=17"), 32617);
 });
 
 test("isUTM", ({ eq }) => {
