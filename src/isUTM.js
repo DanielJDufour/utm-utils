@@ -17,9 +17,9 @@ function isUTM(projection) {
 }
 
 if (typeof define === "function" && define.amd) {
-  return function () {
+  define(function () {
     return isUTM;
-  };
+  });
 }
 
 if (typeof module === "object") {

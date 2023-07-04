@@ -17,9 +17,9 @@ function getCodeFromProjString(proj) {
 }
 
 if (typeof define === "function" && define.amd) {
-  return function () {
+  define(function () {
     return getCodeFromProjString;
-  };
+  });
 }
 
 if (typeof module === "object") {

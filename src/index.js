@@ -8,9 +8,9 @@ const getZone = require("./getZone.js");
 const utm_utils = { getCodeFromEsriWKT, getCodeFromProjString, getHemisphere, getProjString, getZone, isUTM };
 
 if (typeof define === "function" && define.amd) {
-  return function () {
+  define(function () {
     return utm_utils;
-  };
+  });
 }
 
 if (typeof module === "object") {

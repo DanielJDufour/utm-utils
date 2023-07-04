@@ -16,9 +16,9 @@ function getCodeFromEsriWKT(esri_wkt) {
 }
 
 if (typeof define === "function" && define.amd) {
-  return function () {
+  define(function () {
     return getCodeFromEsriWKT;
-  };
+  });
 }
 
 if (typeof module === "object") {

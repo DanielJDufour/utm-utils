@@ -13,9 +13,9 @@ function getProjString(projection) {
 }
 
 if (typeof define === "function" && define.amd) {
-  return function () {
+  define(function () {
     return getProjString;
-  };
+  });
 }
 
 if (typeof module === "object") {

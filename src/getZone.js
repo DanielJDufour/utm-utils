@@ -3,9 +3,9 @@ function getZone(projection) {
 }
 
 if (typeof define === "function" && define.amd) {
-  return function () {
+  define(function () {
     return getZone;
-  };
+  });
 }
 
 if (typeof module === "object") {

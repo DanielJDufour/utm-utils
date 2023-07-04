@@ -9,9 +9,9 @@ function getHemisphere(projection) {
 }
 
 if (typeof define === "function" && define.amd) {
-  return function () {
+  define(function () {
     return getHemisphere;
-  };
+  });
 }
 
 if (typeof module === "object") {
